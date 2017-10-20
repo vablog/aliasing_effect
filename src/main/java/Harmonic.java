@@ -14,7 +14,7 @@ public class Harmonic {
 
     public Harmonic(int harmonic, double amplitude, double phase, boolean deg)
     {
-        this(harmonic, amplitude, deg ? degToRad(phase) : phase);
+        this(harmonic, amplitude, deg ? Math.toRadians(phase) : phase);
     }
 
     public int getHarmonic() {
@@ -38,7 +38,7 @@ public class Harmonic {
     }
 
     public void setPhaseDeg(double phase) {
-        this.phase = degToRad(phase);
+        this.phase = Math.toRadians(phase);
     }
 
     public double getPhaseRad() {
@@ -46,14 +46,7 @@ public class Harmonic {
     }
 
     public double getPhaseDeg() {
-        return radToDeg(phase);
+        return Math.toDegrees(phase);
     }
 
-    private static double degToRad(double deg){
-        return (Math.PI/180.0) * deg;
-    }
-
-    private static double radToDeg(double rad){
-        return (180.0/Math.PI) * rad;
-    }
 }

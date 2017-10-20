@@ -11,7 +11,7 @@ public class SineWave {
     }
 
     public SineWave(double amplitude, double frequency, double phase, boolean deg){
-        this(amplitude, frequency, deg ? degToRad(phase) : phase);
+        this(amplitude, frequency, deg ? Math.toRadians(phase) : phase);
     }
 
     public SineWave(){
@@ -31,7 +31,7 @@ public class SineWave {
     }
 
     public double getPhaseDeg() {
-        return radToDeg(phase);
+        return Math.toDegrees(phase);
     }
 
     public void setAmplitude(double amplitude) {
@@ -47,14 +47,6 @@ public class SineWave {
     }
 
     public void setPhaseDeg(double phase) {
-        this.phase = degToRad(phase);
-    }
-
-    private static double degToRad(double deg){
-        return (Math.PI/180.0) * deg;
-    }
-
-    private static double radToDeg(double rad){
-        return (180.0/Math.PI) * rad;
+        this.phase = Math.toRadians(phase);
     }
 }
