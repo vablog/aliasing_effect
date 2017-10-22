@@ -17,6 +17,16 @@ public class Harmonic {
         this(harmonic, amplitude, deg ? Math.toRadians(phase) : phase);
     }
 
+    public Harmonic(double amplitude, double phase, boolean deg)
+    {
+        this(1, amplitude, deg ? Math.toRadians(phase) : phase);
+    }
+
+    public Harmonic(double amplitude, double phase)
+    {
+        this(1, amplitude, phase);
+    }
+
     public int getHarmonic() {
         return harmonic;
     }
