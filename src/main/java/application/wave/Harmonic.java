@@ -1,3 +1,4 @@
+package application.wave;
 
 public class Harmonic {
 

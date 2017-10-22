@@ -1,3 +1,5 @@
+package application.wave;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,27 +8,27 @@ public class Wave {
     private double offset;
     private double frequency;
     private Harmonic firstHarmonic;
-    private List<Harmonic> higherHarmonics = new ArrayList<Harmonic>();
+    private List<Harmonic> higherHarmonics = new ArrayList<>();
 
-    Wave(double offset, double frequency , Harmonic firstHarmonic){
+    public Wave(double offset, double frequency , Harmonic firstHarmonic){
         firstHarmonic.setHarmonic(1);
         setFirstHarmonic(firstHarmonic);
         setFrequency(frequency);
         setOffset(offset);
     }
 
-    Wave(Harmonic firstHarmonic){
+    public Wave(Harmonic firstHarmonic){
         this(0.0, firstHarmonic);
     }
 
-    Wave(double offset, double frequency, Harmonic firstHarmonic, Harmonic... higherHarmonics){
+    public Wave(double offset, double frequency, Harmonic firstHarmonic, Harmonic... higherHarmonics){
         this(offset, frequency, firstHarmonic);
         for (Harmonic h: higherHarmonics) {
             this.addHigherHarmonic(h);
         }
     }
 
-    Wave(double frequency, Harmonic firstHarmonic, Harmonic... higherHarmonics){
+    public Wave(double frequency, Harmonic firstHarmonic, Harmonic... higherHarmonics){
         this(0.0, frequency, firstHarmonic);
         for (Harmonic h: higherHarmonics) {
             this.addHigherHarmonic(h);

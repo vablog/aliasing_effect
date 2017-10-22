@@ -1,3 +1,7 @@
+package application.aliasingeffect;
+
+import application.wave.Harmonic;
+import application.wave.Wave;
 
 public class AliasingEffect {
 
