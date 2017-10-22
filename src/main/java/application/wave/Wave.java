@@ -8,7 +8,7 @@ public class Wave {
     private double offset;
     private double frequency;
     private Harmonic firstHarmonic;
-    private List<Harmonic> higherHarmonics = new ArrayList<>();
+    private List<Harmonic> higherHarmonics = new ArrayList<Harmonic>();
 
     public Wave(double offset, double frequency , Harmonic firstHarmonic){
         firstHarmonic.setHarmonic(1);
